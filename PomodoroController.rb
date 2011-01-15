@@ -10,7 +10,7 @@ class PomodoroController
 	attr_accessor :minutes, :warn_limit, :alert_limit
 	
 	def awakeFromNib()
-		@minutes = 1
+		@minutes = 25
 		@time_left = @minutes * 60
     @warn_limit = @time_left * 2/5
     @alert_limit = @time_left * 1/5
