@@ -14,15 +14,17 @@ class PomodoroController
 	
 	def start_stop_timer(sender)
 		if @pomodoro_timer.nil?
-			@pomodoro_timer = NSTimer.scheduledTimerWithTimeInterval(60, [ CA] target:self, selector:"time_passed:", userInfo:nil, repeats:true)
-			@timer_label.textColor = NSColor.redColor @start_stop_button.title = “Stop Pomodoro”
-		else
+			@pomodoro_timer = NSTimer.scheduledTimerWithTimeInterval(60, [ CA]target:self, selector:"time_passed:", userInfo:nil, repeats:true) 
+			@timer_label.textColor = NSColor.redColor 
+			@start_stop_button.title = "Stop Pomodoro"
+		else 
 			reset_interface
 		end
 	end
 	
 	def time_passed(timer)
-		if @time_left > 1 @time_left -= 1
+		if @time_left > 1 
+			@time_left -= 1
 			@timer_label.stringValue = @time_left
 		else
 			reset_interface
@@ -34,14 +36,14 @@ class PomodoroController
 		@time_left = 25 
 		@timer_label.stringValue = @time_left 
 		@timer_label.textColor = NSColor.blackColor 
-		@start_stop_button.title = “Start Pomodoro” 
+		@start_stop_button.title = "Start Pomodoro" 
 		@pomodoro_timer.invalidate 
 		@pomodoro_timer = nil
 	end
 	
 	def alert_user 
-		voice = NSSpeechSynthesizer.alloc.[ CA]initWithVoice(“com.apple.speech.synthesis.voice.Victoria”) 
-		voice.startSpeekingString(“Pomodoro complete. Time for a short break”)
+		voice = NSSpeechSynthesizer.alloc.[ CA]initWithVoice("com.apple.speech.synthesis.voice.Victoria") 
+		voice.startSpeekingString("Pomodoro complete. Time for a short break")
 	end
 	
 end
