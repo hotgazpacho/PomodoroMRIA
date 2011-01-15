@@ -12,8 +12,8 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="372"/>
 			<integer value="29"/>
+			<integer value="372"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -801,7 +801,7 @@
 						<object class="NSTextField" id="18401024">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrame">{{15, 60}, {177, 67}}</string>
+							<string key="NSFrame">{{15, 48}, {177, 67}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="60794194">
@@ -809,7 +809,7 @@
 								<int key="NSCellFlags2">138413056</int>
 								<string key="NSContents">25:00</string>
 								<object class="NSFont" key="NSSupport">
-									<string key="NSName">Georgia</string>
+									<string key="NSName">LucidaConsole</string>
 									<double key="NSSize">48</double>
 									<int key="NSfFlags">16</int>
 								</object>
@@ -1174,7 +1174,15 @@
 						<reference key="source" ref="422766983"/>
 						<reference key="destination" ref="528573532"/>
 					</object>
-					<int key="connectionID">381</int>
+					<int key="connectionID">383</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">start_stop_pomodoro:</string>
+						<reference key="source" ref="422766983"/>
+						<reference key="destination" ref="528573532"/>
+					</object>
+					<int key="connectionID">384</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -2169,7 +2177,7 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSAffineTransform">
-						<bytes key="NSTransformStruct">P4AAAL+AAABBgAAAwtYAAA</bytes>
+						<bytes key="NSTransformStruct">P4AAAL+AAABBiAAAwtYAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -2226,7 +2234,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">381</int>
+			<int key="maxID">384</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -2235,13 +2243,13 @@
 					<string key="className">PomodoroController</string>
 					<string key="superclassName">NSObject</string>
 					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">start_stop_timer:</string>
+						<string key="NS.key.0">start_stop_pomodoro:</string>
 						<string key="NS.object.0">id</string>
 					</object>
 					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">start_stop_timer:</string>
+						<string key="NS.key.0">start_stop_pomodoro:</string>
 						<object class="IBActionInfo" key="NS.object.0">
-							<string key="name">start_stop_timer:</string>
+							<string key="name">start_stop_pomodoro:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 					</object>
@@ -2249,6 +2257,7 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>minutes</string>
 							<string>pomodoro_timer</string>
 							<string>start_stop_button</string>
 							<string>time_left</string>
@@ -2256,6 +2265,7 @@
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -2266,6 +2276,7 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>minutes</string>
 							<string>pomodoro_timer</string>
 							<string>start_stop_button</string>
 							<string>time_left</string>
@@ -2273,6 +2284,10 @@
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBToOneOutletInfo">
+								<string key="name">minutes</string>
+								<string key="candidateClassName">id</string>
+							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">pomodoro_timer</string>
 								<string key="candidateClassName">id</string>
